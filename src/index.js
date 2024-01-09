@@ -1,5 +1,4 @@
 const { createBullBoard } = require("@bull-board/api");
-const { BullAdapter } = require("@bull-board/api/bullAdapter");
 const { BullMQAdapter } = require("@bull-board/api//bullMQAdapter");
 const { ExpressAdapter } = require("@bull-board/express");
 const bullmq = require("bullmq");
@@ -8,6 +7,8 @@ const redis = require("redis");
 const bodyParser = require("body-parser");
 
 const config = require("./config");
+
+console.log("config", config);
 
 const redisConfig = {
 	redis: {
